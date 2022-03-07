@@ -5,10 +5,10 @@ PREFIX ?= /usr/local
 BINDIR ?= ${DESTDIR}/${PREFIX}/bin
 
 all: $(TARGET)
-	install $(TARGET) -t ${BINDIR}
+	@echo use make install
 
 install: $(TARGET)
-	install $(TARGET) -t ${BINDIR}
+	install -D $(TARGET) -t ${BINDIR}
 
 uninstall:
 	$(RM) ${BINDIR}/${TARGET}
